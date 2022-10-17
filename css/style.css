@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Raleway", sans-serif;
   color: #213053;
@@ -24,6 +18,12 @@ button {
   cursor: pointer;
   box-shadow: 0 16px 36px rgba(52, 213, 68, 0.22);
   padding: 15px;
+}
+
+button:hover {
+  background-color: #f6980c;
+  box-shadow: 0 16px 36px rgba(246, 152, 12, 0.2);
+  transition: background-color 0.3s ease-in;
 }
 
 .header {
@@ -73,4 +73,88 @@ button {
 .about__sun-image {
   width: 100px;
   height: 100px;
+}
+
+.form {
+  background-color: #1D263A;
+  color: #fff;
+  padding: 115px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form__container {
+  width: 550px;
+}
+.form__container h1 {
+  font-size: 48px;
+}
+.form__container p {
+  font-size: 18px;
+  opacity: 0.65;
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.form form {
+  display: grid;
+  grid-gap: 20px;
+  margin-top: 60px;
+}
+.form label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.form input, .form select {
+  font-size: 18px;
+  color: #213053;
+  height: 60px;
+  padding: 0 20px;
+  border-radius: 15px;
+  border: none;
+}
+.form input {
+  outline: none;
+}
+.form select {
+  appearance: none;
+}
+.form__submit {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.footer {
+  padding: 90px 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.footer__container {
+  display: flex;
+  justify-content: center;
+}
+.footer__copyright {
+  margin-top: 40px;
+  text-align: center;
+  opacity: 0.5;
+}
+.footer__group {
+  margin-right: 80px;
+}
+.footer__group h3 {
+  font-size: 16px;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+.footer__group .footer__links {
+  display: flex;
+  flex-direction: column;
+}
+.footer__group .footer__links a {
+  margin-bottom: 15px;
 }
