@@ -1,8 +1,8 @@
-// * {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-// }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Raleway", sans-serif;
@@ -37,6 +37,10 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
 
     &__logo {
         height: 30px;
@@ -59,6 +63,7 @@ button:hover {
 
     &__info {
         max-width: 550px;
+
         h1 {
             font-size: 70px;
             line-height: 76px;
@@ -76,6 +81,8 @@ button:hover {
             padding: 20px 25px;
             margin-top: 20px;
         }
+
+
     }
 
     &__image {
@@ -83,8 +90,20 @@ button:hover {
     }
 
     &__sun-image {
+        position: absolute;
         width: 100px;
         height: 100px;
+        animation: rotation 10s linear infinite;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
 
@@ -130,7 +149,8 @@ button:hover {
         margin-bottom: 15px;
     }
 
-    input, select {
+    input,
+    select {
         font-size: 18px;
         color: #213053;
         height: 60px;
@@ -186,6 +206,91 @@ button:hover {
             a {
                 margin-bottom: 15px;
             }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .about {
+        padding: 50px 20px;
+
+        &__info {
+            h1 {
+                font-size: 36px;
+                line-height: 40px;
+            }
+        }
+
+        &__sun-image {
+            width: 75px;
+            height: 75px;
+        }
+
+        &__image {
+            width: 280px;
+        }
+    }
+
+    .form {
+        padding: 50px 10px;
+    }
+
+    .footer {
+        padding: 50px 10px;
+    }
+}
+
+@media (max-width: 719px) {
+
+    h1,
+    h2,
+    h3 {
+        font-size: 36px;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .header {
+        padding: 0 10px;
+
+        &__logo {
+            height: 20px;
+        }
+    }
+
+    .about {
+        padding: 50px 10px;
+        display: flex;
+        flex-direction: column-reverse;
+
+        &__sun-image {
+            width: 75px;
+            height: 75px;
+        }
+
+        &__image {
+            width: 280px;
+        }
+    }
+
+    .form {
+        padding: 50px 10px;
+    }
+
+    .footer {
+        padding: 50px 10px;
+
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__group {
+            width: 80%;
         }
     }
 }
